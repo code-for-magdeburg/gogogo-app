@@ -1,0 +1,82 @@
+{
+  "name": "gogogo-app",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Johannes Filter <hi@jfilter.de> (https://johannesfilter.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-for-magdeburg/gogogo-app"
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "postversion": "react-native-version"
+  },
+  "dependencies": {
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.54.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "22.4.1",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "jest": "22.4.2",
+    "plugin-import": "^1.0.8",
+    "prettier": "^1.11.1",
+    "react-native-version": "^2.4.1",
+    "react-test-renderer": "^16.3.0-alpha.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["react", "react-native", "jsx-a11y", "import", "prettier"],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "react/jsx-filename-extension": "off",
+      "no-underscore-dangle": "off",
+      "arrow-body-style": "off",
+      "react/jsx-wrap-multilines": "off",
+      "jsx-a11y/href-no-hash": "off",
+      "global-require": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      ]
+    },
+    "globals": {
+      "fetch": false,
+      "require": false,
+      "__DEV__": false
+    }
+  },
+  "babel": {
+    "presets": ["react-native"]
+  }
+}
